@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>F</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ToolForge - Powerful Online Tools</title>
+    <meta name="description" content="ToolForge provides powerful, fast and easy-to-use online tools for AI, SEO, productivity, developers and creators.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="container nav-content">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">⚒</span>
+            Tool<span>Forge</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tools">All Tools</a>
+            <a href="#categories">Categories</a>
+            <a href="#popular">Popular</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="theme-btn" id="themeBtn">☾</button>
+            <button class="login-btn">Login</button>
+            <button class="start-btn">Get Started</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+</header>
+
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <div class="hero-badge">
+            ✨ Simple. Fast. Powerful.
+        </div>
+
+        <h1>
+            All the Tools You Need,
+            <span>In One Place.</span>
+        </h1>
+
+        <p>
+            Powerful online tools for AI, SEO, productivity,
+            developers, content creators and businesses.
+        </p>
+
+        <div class="search-box">
+            <span>🔍</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a tool..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="hero-stats">
+            <div>
+                <strong>50+</strong>
+                <span>Online Tools</span>
+            </div>
+
+            <div>
+                <strong>10+</strong>
+                <span>Categories</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Free Tools</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Categories -->
+<section class="section" id="categories">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>EXPLORE</span>
+            <h2>Tool Categories</h2>
+            <p>Find the perfect tool for your task.</p>
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card" data-category="AI">
+                <div class="category-icon">🤖</div>
+                <h3>AI Tools</h3>
+                <p>Smart tools powered by artificial intelligence.</p>
+                <span>12 Tools →</span>
+            </div>
+
+            <div class="category-card" data-category="SEO">
+                <div class="category-icon">📈</div>
+                <h3>SEO Tools</h3>
+                <p>Improve your website rankings and visibility.</p>
+                <span>10 Tools →</span>
+            </div>
+
+            <div class="category-card" data-category="Text">
+                <div class="category-icon">📝</div>
+                <h3>Text Tools</h3>
+                <p>Useful tools for writing and editing text.</p>
+                <span>15 Tools →</span>
+            </div>
+
+            <div class="category-card" data-category="Image">
+                <div class="category-icon">🖼️</div>
+                <h3>Image Tools</h3>
+                <p>Resize, compress and optimize your images.</p>
+                <span>8 Tools →</span>
+            </div>
+
+            <div class="category-card" data-category="Developer">
+                <div class="category-icon">💻</div>
+                <h3>Developer Tools</h3>
+                <p>Useful utilities for developers and programmers.</p>
+                <span>14 Tools →</span>
+            </div>
+
+            <div class="category-card" data-category="Productivity">
+                <div class="category-icon">⚡</div>
+                <h3>Productivity</h3>
+                <p>Save time and get more things done.</p>
+                <span>9 Tools →</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Popular Tools -->
+<section class="section tools-section" id="popular">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>POPULAR</span>
+            <h2>Popular Tools</h2>
+            <p>Our most useful and frequently used tools.</p>
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
+
+            <div class="tool-card" data-name="Word Counter" data-category="Text">
+                <div class="tool-top">
+                    <div class="tool-icon purple">W</div>
+                    <span class="badge">Text</span>
+                </div>
+                <h3>Word Counter</h3>
+                <p>Count words, characters and sentences instantly.</p>
+                <button class="use-tool" onclick="openTool('wordCounter')">
+                    Use Tool →
+                </button>
+            </div>
+
+            <div class="tool-card" data-name="Password Generator" data-category="Developer">
+                <div class="tool-top">
+                    <div class="tool-icon blue">🔐</div>
+                    <span class="badge">Security</span>
+                </div>
+                <h3>Password Generator</h3>
+                <p>Create strong and secure random passwords.</p>
+                <button class="use-tool" onclick="openTool('password')">
+                    Use Tool →
+                </button>
+            </div>
+
+            <div class="tool-card" data-name="QR Code Generator" data-category="Productivity">
+                <div class="tool-top">
+                    <div class="tool-icon green">▦</div>
+                    <span class="badge">Utility</span>
+                </div>
+                <h3>QR Code Generator</h3>
+                <p>Create QR codes from text or website URLs.</p>
+                <button class="use-tool" onclick="openTool('qr')">
+                    Use Tool →
+                </button>
+            </div>
+
+            <div class="tool-card" data-name="Text Case Converter" data-category="Text">
+                <div class="tool-top">
+                    <div class="tool-icon orange">Aa</div>
+                    <span class="badge">Text</span>
+                </div>
+                <h3>Text Case Converter</h3>
+                <p>Convert text to uppercase, lowercase and more.</p>
+                <button class="use-tool" onclick="openTool('case')">
+                    Use Tool →
+                </button>
+            </div>
+
+            <div class="tool-card" data-name="URL Encoder Decoder" data-category="Developer">
+                <div class="tool-top">
+                    <div class="tool-icon pink">🔗</div>
+                    <span class="badge">Developer</span>
+                </div>
+                <h3>URL Encoder / Decoder</h3>
+                <p>Encode and decode URLs quickly and easily.</p>
+                <button class="use-tool" onclick="openTool('url')">
+                    Use Tool →
+                </button>
+            </div>
+
+            <div class="tool-card" data-name="SEO Meta Generator" data-category="SEO">
+                <div class="tool-top">
+                    <div class="tool-icon cyan">SEO</div>
+                    <span class="badge">SEO</span>
+                </div>
+                <h3>SEO Meta Generator</h3>
+                <p>Generate optimized title and meta description tags.</p>
+                <button class="use-tool" onclick="openTool('meta')">
+                    Use Tool →
+                </button>
+            </div>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            No tools found.
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Tool Modal -->
+<div class="modal" id="toolModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">×</button>
+
+        <div id="toolContent"></div>
+
+    </div>
+</div>
+
+
+<!-- About -->
+<section class="about-section" id="about">
+    <div class="container about-grid">
+
+        <div>
+            <span class="small-title">ABOUT TOOLFORGE</span>
+            <h2>Powerful tools.<br>Simple experience.</h2>
+        </div>
+
+        <div>
+            <p>
+                ToolForge is an online tools platform designed to make
+                everyday digital tasks faster and easier.
+            </p>
+
+            <p>
+                From SEO and AI tools to text utilities, developer
+                resources and productivity tools, everything is available
+                in one simple platform.
+            </p>
+
+            <button class="start-btn">Explore All Tools →</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to make your work easier?</h2>
+        <p>Explore our collection of powerful online tools.</p>
+        <button class="cta-btn">Explore Tools →</button>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <a href="#" class="logo">
+                <span class="logo-icon">⚒</span>
+                Tool<span>Forge</span>
+            </a>
+
+            <p>
+                Powerful online tools for everyone.
+            </p>
+        </div>
+
+        <div>
+            <h4>Tools</h4>
+            <a href="#popular">Popular Tools</a>
+            <a href="#tools">All Tools</a>
+            <a href="#categories">Categories</a>
+        </div>
+
+        <div>
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+
+        <div>
+            <h4>Resources</h4>
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">FAQ</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            © 2026 ToolForge. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
